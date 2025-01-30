@@ -10,7 +10,7 @@ module.exports = {
   embedColor: "#1db954",
   activityName: "YouTube Music", 
   activityType: "LISTENING",
-  SupportServer: "https://discord.gg/xQF9f9yUEM",
+  SupportServer: "https://discord.gg/U5jBQz3x",
   embedTimeout: 5, 
   errorLog: "", 
   nodes: [
