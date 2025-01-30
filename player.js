@@ -99,7 +99,7 @@ function initializePlayer(client) {
                 iconURL: musicIcons.playerIcon,
                 url: config.SupportServer
             })
-            .setFooter({ text: `Developed by SSRR | Prime Music v1.2`, iconURL: musicIcons.heartIcon })
+            .setFooter({ text: `Developed by Quarkz | MusicBot`, iconURL: musicIcons.heartIcon })
             .setTimestamp()
             .setDescription(  
                 `- **Title:** [${track.info.title}](${track.info.uri})\n` +
@@ -151,7 +151,7 @@ function initializePlayer(client) {
             const autoplaySetting = await autoplayCollection.findOne({ guildId });
     
             if (autoplaySetting?.autoplay) {
-                //console.log(`Autoplay is enabled for guild: ${guildId}`);
+                
                 const nextTrack = await player.autoplay(player);
     
                 if (!nextTrack) {
@@ -205,7 +205,7 @@ function setupCollector(client, player, channel, message) {
         'stopTrack', 'pauseTrack', 'resumeTrack', 'volumeUp', 'volumeDown'
     ].includes(i.customId);
 
-    const collector = message.createMessageComponentCollector({ filter, time: 600000 }); // Set timeout if desired
+    const collector = message.createMessageComponentCollector({ filter, time: 600000 });
 
     collector.on('collect', async i => {
         await i.deferUpdate();
